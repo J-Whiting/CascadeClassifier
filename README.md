@@ -1,5 +1,7 @@
 # Cascade Classifier Training
 
+### Notes
+
 [Cascade Classifier Training](https://docs.opencv.org/2.4/doc/user_guide/ug_traincascade.html)
 
 [Creating your own Haar Cascade OpenCV Python Tutorial](https://pythonprogramming.net/haar-cascade-object-detection-python-opencv-tutorial/)
@@ -12,7 +14,11 @@
 
 [Viola–Jones object detection framework](https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework)
 
+### Packages
 
+`pip install -r requirements.txt`
+
+## Process
 
 - Update `options.py` to point to the correct files.
 
