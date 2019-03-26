@@ -16,6 +16,7 @@ if __name__ == "__main__":
 
     correct = 0
     incorrect = 0
+    false_positives = 0
 
     while cap.isOpened():
 
@@ -42,7 +43,7 @@ if __name__ == "__main__":
             cv.imshow("", frame)
 
             # Waiting for user input
-            key = cv.waitKey(6000) & 0xFF
+            key = cv.waitKey(0) & 0xFF
 
             # If q is pressed, stop the program
             if key == ord('q'):
@@ -53,6 +54,10 @@ if __name__ == "__main__":
             # If n is pressed, it is an incorrect result
             elif key == ord('n'):
                 incorrect += 1
+            # If f is pressed, the face is found but so are some false positives
+            # This can be seen as both correct and incorrect
+            elif key == ord('f'):
+                false_positives += 1
 
         else:
             break
@@ -64,5 +69,6 @@ if __name__ == "__main__":
     # Output the results
     print("Correct: " + str(correct))
     print("Incorrect: " + str(incorrect))
+    print("False Positives: " + str(false_positives))
     print("..." + str(int(100 * correct / (correct + incorrect))) + "%")
     print()
