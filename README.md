@@ -1,5 +1,7 @@
 # Cascade Classifier Training
 
+Program to train cascade classifiers
+
 ### Packages
 
 `pip install -r requirements.txt`
